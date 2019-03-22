@@ -96,4 +96,27 @@ xsd definition
 
     All dependencies are downloaded from maven repository and made available to the project
     
-6. 
+    Transitive dependencies are those where a library or jar requires other jar's for it to work properly, example, Hibernate jar requires jta, ehcache, dom4j, cglib and more. These will be available under project maven dependencies
+    
+    In order to exclude or remove use of any transitive dependencies in your project we can use <exclusion> tag under dependencies in pom.xml
+    
+    <dependencies>
+      <dependency>
+        <groupId> org.hibernate </groupId>
+        <artifactId> hibernate </artifactId>
+        <version> 2.5 </version>
+        <exclusions>
+          <exclusion>
+            <groupId> javax.transaction </groupId>
+            <artifactId> jta </artifactId>
+          </exclusion>
+        </exclusions>
+      </dependency>
+    </dependencies>
+    
+6. build
+      Plugins  example, maven plugins, ant plugins and etc,.
+
+------------------------------------------------------------------------------------------------------------------------------------------
+
+
