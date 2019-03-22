@@ -14,8 +14,7 @@ Project Name or Artifact ID
                         AppTest.class
                     maven-status
                 pom.xml
----------------------------------------------------------------------------------------------------------------------------------------------
-
+--------------------------------------------------------------------------------------------------------------------------------------------
 Maven commands,
 
 1. mvn compile
@@ -29,9 +28,42 @@ Maven commands,
     
 4. mvn test
     Runs junit tests from compiled source files in src/test/java
+    
+5. mvn install
+    Install the package into the local repository, for use as a dependency in other projects locally
+    
+6. mvn clean deploy
+    In a build environment, use the above command to cleanly build and deploy artifacts into the shared repository.
 
+--------------------------------------------------------------------------------------------------------------------------------------------
+Build Life Cycle of Maven,
 
----------------------------------------------------------------------------------------------------------------------------------------------
+1. Validate
+    Validates whether pom.xml file is fine
+    
+2. Compile  (javac App.java and javac AppTest.java)
+    Comiples .java files in the src/main/java and src/test/java folders and creates a target folder containing .class files under
+    classes and test-classes folders
+
+3. Test
+    Runs jUnit tests in the src/test/java
+
+4. Package  (jar -cvf MyApp.jar App.class)
+    Creates a package .jar or .war or .ear based on the project
+
+5. Integration tests
+    Runs Integration tests in the src/it folder
+
+6. Verify
+    Run any checks on results of integration tests to ensure quality criteria are met
+
+7. Install
+    Install the package into the local repository, for use as a dependency in other projects locally
+    
+8. Deploy
+    Done in the build environment, copies the final package to the remote repository for sharing with other developers and projects.
+    
+--------------------------------------------------------------------------------------------------------------------------------------------
 1. Group ID  example, com.Bank.Citi 
     
     Unique identifier among the projects or organisation
