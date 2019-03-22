@@ -57,7 +57,7 @@ Build Life Cycle of Maven,
     Runs jUnit tests in the src/test/java
 
 4. Package  (jar -cvfm MyApp.jar manifest.txt App.class)
-    Creates a package .jar or .war or .ear based on the project and manifest file
+    Creates a package .jar or .war, .ear or .pom based on the project and a manifest file is created
 
 5. Integration tests
     Runs Integration tests in the src/it folder
