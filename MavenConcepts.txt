@@ -14,7 +14,7 @@ Project Name or Artifact ID
                     Test-classes
                         AppTest.class
                     maven-status
-                    surefire-reports
+                    surefire-reports  (generate test reports)
                     maven-archiver
                 pom.xml
                 
@@ -72,6 +72,10 @@ Build Life Cycle of Maven,
     Done in the build environment, copies the final package to the remote repository for sharing with other developers and projects.
     
 --------------------------------------------------------------------------------------------------------------------------------------------
+POM.xml structure,
+
+xsd definition
+
 1. Group ID  example, com.Bank.Citi 
     
     Unique identifier among the projects or organisation
@@ -86,3 +90,10 @@ Build Life Cycle of Maven,
    Second number is a minor version which includes minor features added
    Third number is a incremental version which includes bug fixes
    
+4. packaging   example, jar, war, ear
+
+5. dependencies  example, jUnit, Hibernate, jackson and etc,.
+
+    All dependencies are downloaded from maven repository and made available to the project
+    
+6. 
