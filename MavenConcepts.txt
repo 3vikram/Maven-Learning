@@ -1,4 +1,4 @@
-Maven Project Structure
+Maven Project Structure used convention over configuration
 
 Project Name or Artifact ID
                 src/main/java
@@ -111,6 +111,12 @@ xsd definition
             <artifactId> jta </artifactId>
           </exclusion>
         </exclusions>
+      <dependency>
+        <groupId> junit </groupId>
+        <artifactId> junit </artifactId>
+        <version> 4.2.0 </version>
+        <scope> test </scope>                           // scope tag adds when to use the dependencies. Here junit will be used during test
+      </dependency>
       </dependency>
     </dependencies>
     
@@ -122,7 +128,41 @@ xsd definition
         
 6. build
       Plugins  example, maven plugins, ant plugins and etc,.
+      
+      <build>
+        <plugins>
+          <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-compiler-plugin</artifactId>           // maven plugin to compile .java files to .class
+            <version>3.2</version>
+            <configuration>
+                <verbose>true</verbose>
+                <source>1.8</source>                      // java version to use
+                <target>1.8</target>
+                <showWarnings>true</showWarnings>
+            </configuration>
+          </plugin>
+        </plugins>
+      </build>
 
 ------------------------------------------------------------------------------------------------------------------------------------------
+
+Super POM,
+
+Effective pom is a parent pom from where project pom.xml is inherited from
+
+This parent pom contains details like,
+  1. build source directory
+  2. build script directory
+  3. build test source directory
+  4. build output directory
+  5. plugin policies like to update plugins or not, snapshots for plugins enabled or not, central repository url for downloading the plugins
+  6. resources directory information
+  7. target folder directory
+  
+Note: Recommended not to override the Effective or parent pom via project pom.xml file
+
+
+
 
 
