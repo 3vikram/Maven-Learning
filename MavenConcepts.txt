@@ -8,12 +8,20 @@ Project Name or Artifact ID
                         Package_Name
                                 AppTest.java
                 target
+                    MyApp.jar  (This jar contains App.class and META-INF which holds the manifest and other general information about the   JAR)
                     classes
                         App.class
                     Test-classes
                         AppTest.class
                     maven-status
+                    surefire-reports
+                    maven-archiver
                 pom.xml
+                
+manifest file content will be like this,
+
+Manifest-Version: 1.0
+Main-Class: App
 --------------------------------------------------------------------------------------------------------------------------------------------
 Maven commands,
 
@@ -48,7 +56,7 @@ Build Life Cycle of Maven,
 3. Test
     Runs jUnit tests in the src/test/java
 
-4. Package  (jar -cvf MyApp.jar App.class)
+4. Package  (jar -cvfe MyApp.jar App.class)
     Creates a package .jar or .war or .ear based on the project
 
 5. Integration tests
