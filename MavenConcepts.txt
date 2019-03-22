@@ -1,0 +1,48 @@
+Maven Project Structure
+
+Project Name or Artifact ID
+                src/main/java
+                        Package_Name
+                                App.java
+                src/test/java
+                        Package_Name
+                                AppTest.java
+                target
+                    classes
+                        App.class
+                    Test-classes
+                        AppTest.class
+                    maven-status
+                pom.xml
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Maven commands,
+
+1. mvn compile
+    Compiles the .java files in src/main/java folder and creates the .class files under target-->classes folder as shown in above project structure
+    
+2. mvn test-compile
+    Compiles the .java files in src/main/java and src/test/java folders and creates the .class files under target-->classes and target-->Test-classes folder as shown in the above project structure
+    
+3. mvn clean
+    Cleans target directory or removes target directory
+    
+4. mvn test
+    Runs junit tests from compiled source files in src/test/java
+
+
+---------------------------------------------------------------------------------------------------------------------------------------------
+1. Group ID  example, com.Bank.Citi 
+    
+    Unique identifier among the projects or organisation
+    
+2. Artifact ID   example, TransactionSystem
+
+   This is the ID or name of the project, artifactId defines the artifact's location within the repository.
+
+3. Version   example, 1.0.1
+
+   First number from the left defines the Major version which includes major change and features added
+   Second number is a minor version which includes minor features added
+   Third number is a incremental version which includes bug fixes
+   
