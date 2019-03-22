@@ -115,8 +115,9 @@ xsd definition
     </dependencies>
     
     Note: 
-        version 2.5, means version 2.5 and above
-        version ,2.5 means version 2.5 and below
+        version [2.5,] means version 2.5 and above
+        version [,2.5] means version 2.5 and below
+        version [,2.5) means versions below 2.5 excluding 2.5
         
 6. build
       Plugins  example, maven plugins, ant plugins and etc,.
