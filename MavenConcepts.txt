@@ -32,7 +32,7 @@ Maven commands,
     Compiles the .java files in src/main/java and src/test/java folders and creates the .class files under target-->classes and target-->Test-classes folder as shown in the above project structure
     
 3. mvn clean
-    Cleans target directory or removes target directory
+    Cleans target directory or removes target directory containing class and jar files
     
 4. mvn test
     Runs junit tests from compiled source files in src/test/java
