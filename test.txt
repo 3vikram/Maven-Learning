@@ -1,3 +1,5 @@
 This is my first push to GitHub source
 
 I Love coding!!!
+
+I am learning GitHub, yayyy!!!!
